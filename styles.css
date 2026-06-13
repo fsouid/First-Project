@@ -231,6 +231,7 @@ button:active {
 /* Adjust book img cover sizing & spacing */
 .books {
     display: flex;
+    flex-wrap: wrap; /* enable wrapping when there are too many items on one line */
 }
 
 .book {
@@ -241,7 +242,7 @@ button:active {
 .book__img {
     max-height: 380px;
     transition: all 300ms ease;
-    cursor: not-allowed; /* this signifies that the link in un-clickable */
+    cursor: not-allowed; /* this signifies that link is un-clickable */
 }
 
 .book__img--wrapper {
@@ -273,4 +274,10 @@ button:active {
     text-decoration: line-through black;
     padding-right: 6px;
     color: #bfbfbf;
+}
+
+/* LATEST */
+
+#recent {
+    
 }
