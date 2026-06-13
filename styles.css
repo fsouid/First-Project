@@ -1,0 +1,276 @@
+/* Import desired font from google (went with Elms sans) */
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Determine default page layout styling & add font family */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Elms Sans", sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Style nav bar, container, logo, images, and nav links */
+nav {
+    height: 80px;
+    display: flex;
+}
+
+.nav__container {
+    padding: 0 24px;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    /* size adjustment for larger screens */
+    height: 100%;
+    max-height: 50vh;
+    padding: 20px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.logo {
+    width: 180px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+/* Add span text color styling (green) */
+.blue {
+    color: #2D336B;
+}
+
+.nav__link {
+    text-decoration: none;
+    margin-left: 16px;
+    font-size: 20px;
+    color: #2D336B;
+    font-weight: bold;
+    padding: 6px 12px;
+}
+
+/* Style primary books link */
+.nav__link--primary {
+    border-radius: 14px;
+    background-color: #2D336B;
+    color: #FFF2F2;
+}
+
+/* Add hover effect for nav links */
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__link--primary:hover {
+    text-decoration: none;
+}
+
+/* Add background color to main page */
+#landing {
+    background-color: #FFF2F2;
+}
+
+header {
+    height: calc(100vh - 80px);
+}
+
+/* Style header & header description */
+.header__container {
+    padding-top: 24px;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adjust h1 & h2 font size, margin, & alignment */
+h1 {
+    font-size: 46px;
+    color: #2D336B;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 36px;
+    text-align: center;
+}
+
+/* Style button */
+.btn {
+    background-color: #2D336B;
+    color: #FFF2F2;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 14px;
+    border: none;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Add button transition effect when clicked */
+button:active {
+    transform: translateY(2px);
+}
+
+.header__img--wrapper {
+    padding: 20px;
+    z-index: 2;
+}
+
+.container {
+    padding: 56px 0;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HIGHLIGHTS */
+
+/* Add squiggly separator lines for top & bottom sections surrounding highlights */
+#highlights {
+    position: relative;
+}
+
+#highlights:before,
+#highlights:after {
+    content: "";
+    background: url(./assets/wave.svg);
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    left: 0;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#highlights:before {
+    top: 1px;
+    transform: translateY(-100%);
+}
+
+#highlights:after {
+    bottom: 1px;
+    transform: translateY(100%) rotate(180deg);
+}
+
+.highlight__wrapper {
+    display: flex;
+}
+
+.highlight {
+    padding: 0 24px;
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.highlight__para {
+    text-align: center;
+    max-width: 240px; /* constrain paragraph width for icon list */
+}
+
+/* Adjust icon color and sizing */
+.highlight__img {
+    color: #2D336B;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.highlight__subtitle {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+/* FEATURES */
+
+#features {
+    padding-top: 6vh;
+    background-color: #FFF2F2;
+}
+
+/* Adjust book img cover sizing & spacing */
+.books {
+    display: flex;
+}
+
+.book {
+    width: 25%;
+    padding: 24px;
+}
+
+.book__img {
+    max-height: 380px;
+    transition: all 300ms ease;
+    cursor: not-allowed; /* this signifies that the link in un-clickable */
+}
+
+.book__img--wrapper {
+    margin-bottom: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.book:hover .book__img {
+    transform: scale(1.05);
+}
+
+.book__title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.book__title:hover {
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.book__ratings {
+    margin-bottom: 8px;
+    color: #fabf2a;
+}
+
+.book__price--normal {
+    text-decoration: line-through black;
+    padding-right: 6px;
+    color: #bfbfbf;
+}
